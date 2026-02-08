@@ -3,68 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hatzalah Cleveland - Emergency Medical Services</title>
+    <title>Hatzalah Cleveland 216-888-1818 for emergencies&nbsp;911</title>
     
-    <!-- SEO & Open Graph Meta Tags -->
-    <meta name="description" content="Hatzalah Cleveland provides rapid, professional volunteer emergency medical services (EMS) to Beachwood, Cleveland Heights, University Heights, and surrounding neighborhoods. Seconds count when saving lives.">
-    <meta name="keywords" content="Hatzalah Cleveland, Emergency Medical Services, EMS, Volunteer EMT, Beachwood EMS, Cleveland Heights EMS, University Heights EMS, Jewish Emergency Response, Rapid Medical Response">
-    <meta name="author" content="Hatzalah Cleveland">
-    <meta name="robots" content="index, follow">
+    <!-- SEO & Social Media Meta Tags (Enhanced) -->
+    <meta name="description" content="Hatzalah Cleveland is a volunteer emergency medical service serving Beachwood, Cleveland Heights, and University Heights.">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <link rel="canonical" href="https://www.hatzalahcleveland.org/">
     
     <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hatzalahcleveland.org/">
-    <meta property="og:title" content="Hatzalah Cleveland - Emergency Medical Services">
-    <meta property="og:description" content="Volunteer Emergency Medical Services providing rapid response and professional care to our community. Seconds Count. Community Saving Lives.">
+    <meta property="og:title" content="Hatzalah Cleveland 216-888-1818 for emergencies&nbsp;911">
+    <meta property="og:description" content="Hatzalah Cleveland is a volunteer emergency medical service serving Beachwood, Cleveland Heights, and University Heights.">
+    <meta property="og:url" content="https://www.hatzalahcleveland.org/">
+    <meta property="og:site_name" content="Hatzalah Cleveland">
     <meta property="og:image" content="https://hatzolahcleveland.netlify.app/HATZALAH-LOGO.PNG">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://hatzalahcleveland.org/">
-    <meta property="twitter:title" content="Hatzalah Cleveland - Emergency Medical Services">
-    <meta property="twitter:description" content="Volunteer Emergency Medical Services providing rapid response and professional care to our community. Seconds Count. Community Saving Lives.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hatzalah Cleveland 216-888-1818 for emergencies&nbsp;911">
+    <meta name="twitter:description" content="Hatzalah Cleveland is a volunteer emergency medical service serving Beachwood, Cleveland Heights, and University Heights.">
     <meta property="twitter:image" content="https://hatzolahcleveland.netlify.app/HATZALAH-LOGO.PNG">
     
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data (Enhanced) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "EmergencyService",
-      "name": "Hatzalah Cleveland",
-      "url": "https://hatzalahcleveland.org",
-      "logo": "https://hatzolahcleveland.netlify.app/HATZALAH-LOGO.PNG",
-      "image": "https://hatzolahcleveland.netlify.app/HATZALAH-LOGO.PNG",
-      "description": "Volunteer Emergency Medical Services serving Beachwood, Cleveland Heights, University Heights, and surrounding areas.",
-      "telephone": "+1-216-888-1818",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "4498 Churchill Blvd.",
-        "addressLocality": "Cleveland",
-        "addressRegion": "OH",
-        "postalCode": "44118",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Beachwood" },
-        { "@type": "City", "name": "Cleveland Heights" },
-        { "@type": "City", "name": "University Heights" }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/HatzalahCtown",
-        "https://www.linkedin.com/company/hatzalah-cleveland-ems",
-        "https://share.google/sdCEMNgo9HIjXfhTt"
-      ],
-      "contactPoint": [
+      "@graph": [
         {
-          "@type": "ContactPoint",
-          "telephone": "+1-216-888-1818",
-          "contactType": "emergency",
-          "availableLanguage": "English"
+          "@type": ["EmergencyService", "Organization"],
+          "@id": "https://www.hatzalahcleveland.org/#organization",
+          "name": "Hatzalah Cleveland",
+          "url": "https://www.hatzalahcleveland.org",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://www.hatzalahcleveland.org/#logo",
+            "url": "https://hatzolahcleveland.netlify.app/HATZALAH-LOGO.PNG",
+            "contentUrl": "https://hatzolahcleveland.netlify.app/HATZALAH-LOGO.PNG",
+            "caption": "Hatzalah Cleveland",
+            "inLanguage": "en-US",
+            "width": "512",
+            "height": "512"
+          },
+          "description": "Volunteer Emergency Medical Services. For emergencies dial 216-888-1818.",
+           "sameAs": [
+            "https://www.facebook.com/HatzalahCtown",
+            "https://www.linkedin.com/company/hatzalah-cleveland-ems",
+            "https://share.google/sdCEMNgo9HIjXfhTt"
+          ]
         },
         {
-          "@type": "ContactPoint",
-          "telephone": "+1-216-353-6613",
-          "contactType": "customer service"
+          "@type": "WebSite",
+          "@id": "https://www.hatzalahcleveland.org/#website",
+          "url": "https://www.hatzalahcleveland.org",
+          "name": "Hatzalah Cleveland",
+          "publisher": {
+            "@id": "https://www.hatzalahcleveland.org/#organization"
+          },
+          "inLanguage": "en-US",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.hatzalahcleveland.org/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.hatzalahcleveland.org/#webpage",
+          "url": "https://www.hatzalahcleveland.org/",
+          "name": "Hatzalah Cleveland 216-888-1818 for emergencies 911",
+          "datePublished": "2025-01-15T14:47:38-05:00",
+          "dateModified": "2026-02-08T10:00:00-05:00",
+          "about": {
+            "@id": "https://www.hatzalahcleveland.org/#organization"
+          },
+          "isPartOf": {
+            "@id": "https://www.hatzalahcleveland.org/#website"
+          },
+          "primaryImageOfPage": {
+             "@type": "ImageObject",
+             "url": "https://hatzolahcleveland.netlify.app/HATZALAH-LOGO.PNG"
+          },
+          "inLanguage": "en-US"
         }
       ]
     }
@@ -214,7 +234,7 @@
                 <h2 class="text-2xl md:text-4xl font-bold text-brand-dark mb-4">Our Mission</h2>
                 <div class="w-16 h-1 bg-brand-blue mx-auto rounded"></div>
                 <p class="mt-6 text-gray-600 text-base md:text-lg px-2">
-                    Hatzalah Cleveland is a volunteer EMS organization providing rapid response and professional emergency care. Our goal is to stabilize patients and bridge the gap until ambulance transport arrives.
+                    Hatzalah Cleveland is a volunteer EMS organization providing rapid response and professional emergency care to the communities of <strong>Beachwood, Cleveland Heights, and University Heights</strong>. Our goal is to stabilize patients and bridge the gap until ambulance transport arrives.
                 </p>
             </div>
 
