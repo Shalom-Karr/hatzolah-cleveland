@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hatzalah Cleveland - Emergency Medical Services</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="Hatzalah Cleveland provides rapid, professional volunteer emergency medical services (EMS) to Beachwood, Cleveland Heights, University Heights, and surrounding neighborhoods. Seconds count when saving lives.">
+    <meta name="keywords" content="Hatzalah Cleveland, Emergency Medical Services, EMS, Volunteer EMT, Beachwood EMS, Cleveland Heights EMS, University Heights EMS, Jewish Emergency Response, Rapid Medical Response">
+    <meta name="author" content="Hatzalah Cleveland">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hatzalahcleveland.org/">
+    <meta property="og:title" content="Hatzalah Cleveland - Emergency Medical Services">
+    <meta property="og:description" content="Volunteer Emergency Medical Services providing rapid response and professional care to our community. Seconds Count. Community Saving Lives.">
+    <meta property="og:image" content="https://hatzalahcleveland.org/hatzalah-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hatzalahcleveland.org/">
+    <meta property="twitter:title" content="Hatzalah Cleveland - Emergency Medical Services">
+    <meta property="twitter:description" content="Volunteer Emergency Medical Services providing rapid response and professional care to our community. Seconds Count. Community Saving Lives.">
+    <meta property="twitter:image" content="https://hatzalahcleveland.org/hatzalah-logo.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="hatzalah-logo.png">
+    <link rel="apple-touch-icon" href="hatzalah-logo.png">
     <script>
         tailwind.config = {
             theme: {
@@ -32,68 +54,8 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-    <!-- Emergency Top Bar -->
-    <div class="bg-brand-red text-white py-2 px-4 text-center font-bold sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 lg:gap-8 text-sm md:text-base">
-            <a href="tel:2168881818" class="hover:underline flex items-center gap-2">
-                <i class="fas fa-phone-alt animate-pulse"></i> EMERGENCY: 216-888-1818
-            </a>
-            <span class="hidden md:inline text-white/30">|</span>
-            <a href="tel:911" class="hover:underline flex items-center gap-2">
-                <i class="fas fa-ambulance"></i> 911 Backup
-            </a>
-            <span class="hidden lg:inline text-white/30">|</span>
-            <a href="tel:8002221222" class="hover:underline flex items-center gap-2">
-                <i class="fas fa-vial"></i> Poison Control: 800-222-1222
-            </a>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-[40px] z-40 transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3">
-                <img src="hatzalah-logo.png" alt="Hatzalah Cleveland Logo" class="h-12 md:h-16 w-auto transition-all duration-300" id="nav-logo">
-                <span class="text-xl md:text-2xl font-bold text-brand-dark hidden sm:inline">Hatzalah Cleveland</span>
-            </a>
-            
-            <div class="hidden md:flex items-center gap-6 font-medium text-gray-600">
-                <a href="#about" class="hover:text-brand-blue transition">About</a>
-                <a href="#services" class="hover:text-brand-blue transition">Services</a>
-                <a href="#faq" class="hover:text-brand-blue transition">FAQ</a>
-                <a href="contact-us.html" class="hover:text-brand-blue transition">Contact</a>
-                <div class="flex items-center gap-3">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOdMVD9wFs-TLTkjCneFNKQGpzFR-fC8jvzWP8V-mnJ0eSog/viewform" target="_blank" class="border-2 border-brand-blue text-brand-blue px-5 py-2 rounded-full hover:bg-brand-blue hover:text-white transition shadow-sm font-semibold">
-                        Apply
-                    </a>
-                    <a href="donate.html" class="bg-brand-blue text-white px-6 py-2 rounded-full hover:bg-brand-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-semibold">
-                        Donate <i class="fas fa-heart ml-1 text-red-300"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-600 focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 flex flex-col gap-4 shadow-lg absolute w-full z-50">
-            <div class="flex items-center gap-2 mb-2 border-b pb-2">
-                <img src="hatzalah-logo.png" alt="Logo" class="h-8 w-auto">
-                <span class="font-bold text-brand-dark">Hatzalah Cleveland</span>
-            </div>
-            <a href="#about" class="block text-gray-600 hover:text-brand-blue font-medium">About</a>
-            <a href="#services" class="block text-gray-600 hover:text-brand-blue">Services</a>
-            <a href="#faq" class="block text-gray-600 hover:text-brand-blue">FAQ</a>
-            <a href="contact-us.html" class="block text-gray-600 hover:text-brand-blue">Contact</a>
-            <div class="grid grid-cols-2 gap-3 mt-2">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOdMVD9wFs-TLTkjCneFNKQGpzFR-fC8jvzWP8V-mnJ0eSog/viewform" target="_blank" class="block border-2 border-brand-blue text-brand-blue px-4 py-2 rounded text-center font-semibold">Apply</a>
-                <a href="donate.html" class="block bg-brand-blue text-white px-4 py-2 rounded text-center font-semibold shadow">Donate <i class="fas fa-heart ml-1 text-red-300"></i></a>
-            </div>
-        </div>
-    </nav>
+    <!-- Shared Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
     <header class="relative bg-brand-dark text-white py-16 md:py-32 overflow-hidden">
@@ -165,7 +127,7 @@
     <!-- Dear Neighbor Letter -->
     <section class="py-12 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
-            <div class="bg-brand-light p-8 md:p-12 rounded-3xl shadow-inner border border-gray-100 relative">
+            <div class="bg-brand-light p-8 md:p-12 rounded-3xl shadow-inner border border-gray-100 relative animate-on-scroll">
                 <i class="fas fa-quote-left absolute top-8 left-8 text-4xl text-brand-blue opacity-10"></i>
                 <div class="relative z-10">
                     <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-6">Dear Neighbor,</h2>
@@ -212,26 +174,63 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-6 md:gap-10">
-                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
+                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center animate-on-scroll">
                     <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow text-brand-blue text-xl md:text-2xl">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-bold mb-3 text-brand-dark">Rapid Response</h3>
                     <p class="text-gray-600 text-sm md:text-base">With volunteers living and working in the community, our response times are measured in seconds, not minutes.</p>
                 </div>
-                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
+                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center animate-on-scroll">
                     <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow text-brand-blue text-xl md:text-2xl">
                         <i class="fas fa-user-md"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-bold mb-3 text-brand-dark">Professional Care</h3>
                     <p class="text-gray-600 text-sm md:text-base">Our responders are state-certified EMTs and Paramedics equipped with advanced lifesaving equipment.</p>
                 </div>
-                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
+                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center animate-on-scroll">
                     <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow text-brand-blue text-xl md:text-2xl">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-bold mb-3 text-brand-dark">100% Volunteer</h3>
                     <p class="text-gray-600 text-sm md:text-base">We are a non-profit organization funded entirely by donations. Our services are free of charge to everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section (New) -->
+    <section class="py-16 bg-white" id="how-it-works">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-brand-dark mb-12">How It Works</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 relative">
+                <!-- Step 1 -->
+                <div class="flex-1 animate-on-scroll">
+                    <div class="w-20 h-20 bg-brand-red text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg z-10 relative">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">1. You Call</h3>
+                    <p class="text-gray-600">Dial 216-888-1818 for any medical emergency.</p>
+                </div>
+                <!-- Arrow (hidden on mobile) -->
+                <div class="hidden md:block text-gray-300 text-2xl animate-on-scroll"><i class="fas fa-chevron-right"></i></div>
+                <!-- Step 2 -->
+                <div class="flex-1 animate-on-scroll">
+                    <div class="w-20 h-20 bg-brand-blue text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg z-10 relative">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">2. Dispatch Alerts</h3>
+                    <p class="text-gray-600">Our dispatch system instantly alerts the nearest volunteers.</p>
+                </div>
+                <!-- Arrow -->
+                <div class="hidden md:block text-gray-300 text-2xl animate-on-scroll"><i class="fas fa-chevron-right"></i></div>
+                <!-- Step 3 -->
+                <div class="flex-1 animate-on-scroll">
+                    <div class="w-20 h-20 bg-brand-dark text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg z-10 relative">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">3. Responder Arrives</h3>
+                    <p class="text-gray-600">A trained EMT arrives in minutes to stabilize the patient.</p>
                 </div>
             </div>
         </div>
@@ -248,7 +247,7 @@
 
             <div class="space-y-4" id="faq-container">
                 <!-- FAQ Item 1 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">What is Hatzalah?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -261,7 +260,7 @@
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">What is Hatzalah Cleveland?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -274,7 +273,7 @@
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Why was Hatzalah Cleveland started?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -289,7 +288,7 @@
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">When is it appropriate to call Hatzalah Cleveland?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -324,7 +323,7 @@
                 </div>
 
                 <!-- FAQ Item 5 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Are there services that Hatzalah Cleveland does not provide?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -338,7 +337,7 @@
                 </div>
 
                 <!-- FAQ Item 6 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">What training do responders have?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -352,7 +351,7 @@
                 </div>
 
                 <!-- FAQ Item 7 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Does Hatzalah have a continuing education program for its responders?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -365,7 +364,7 @@
                 </div>
 
                 <!-- FAQ Item 8 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Does Hatzalah offer community training?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -388,7 +387,7 @@
                 </div>
 
                 <!-- FAQ Item 9 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Why won’t Hatzalah members talk about a patient they treated?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -401,7 +400,7 @@
                 </div>
 
                 <!-- FAQ Item 10 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Is Hatzalah Cleveland affiliated with any other organization?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -414,7 +413,7 @@
                 </div>
 
                 <!-- FAQ Item 11 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">How is Hatzalah Cleveland funded?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -427,7 +426,7 @@
                 </div>
 
                 <!-- FAQ Item 12 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Does Hatzalah Cleveland charge for its services?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -440,7 +439,7 @@
                 </div>
 
                 <!-- FAQ Item 13 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Is Hatzalah Cleveland accepting new members?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -454,7 +453,7 @@
                 </div>
 
                 <!-- FAQ Item 14 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group animate-on-scroll">
                     <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">How can I find more information about Hatzalah Cleveland?</span>
                         <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
@@ -468,66 +467,36 @@
             </div>
         </div>
     </section>
+
+    <!-- Testimonials Section (New) -->
+    <section class="py-16 bg-brand-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-brand-dark mb-12 text-center">Community Testimonials</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md relative animate-on-scroll">
+                    <i class="fas fa-quote-left text-brand-blue/20 text-4xl absolute top-4 left-4"></i>
+                    <p class="text-gray-600 italic mb-4 relative z-10">"They come in lightening speed with care and compassion. One time I called and someone came in 20 seconds from around the corner. They were there for me in my times of urgent necessity when 911 couldn't come fast enough. Highly recommend."</p>
+                    <div class="flex items-center gap-2 text-gold text-sm mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-bold text-brand-dark">- Arielle Haft</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md relative animate-on-scroll">
+                    <i class="fas fa-quote-left text-brand-blue/20 text-4xl absolute top-4 left-4"></i>
+                    <p class="text-gray-600 italic mb-4 relative z-10">"You never want to have call hatzalah, but they are always there for you at any time of the day or night. I had to call for an emergency and the first responders arrived within 60 seconds! Unbelievable support and care. Keep up the great work!"</p>
+                    <div class="flex items-center gap-2 text-gold text-sm mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-bold text-brand-dark">- Benjamin Kaplan</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-brand-dark text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="hatzalah-logo.png" alt="Hatzalah Cleveland" class="h-16 w-auto bg-white p-1 rounded">
-                        <h3 class="text-2xl font-bold">Hatzalah Cleveland</h3>
-                    </div>
-                    <p class="text-gray-400 max-w-sm">
-                        Dedicated to saving lives through rapid community response. Providing peace of mind and professional care when seconds count.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-brand-blue">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-phone fa-fw"></i> Non-Emergency: 216-353-6613</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-envelope fa-fw"></i> info@hatzalahcleveland.org</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt fa-fw"></i> Cleveland Heights, OH</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-brand-blue">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="donate.html" class="hover:text-white transition">Donate</a></li>
-                        <li><a href="contact-us.html" class="hover:text-white transition">Contact Us</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="communications-consent.html" class="hover:text-white transition">Consent Form</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-                <!-- Divider -->
-                <div class="h-px bg-white/5 w-full my-12"></div>
-                
-                <!-- Centered Built By Section -->
-                <div class="flex justify-center items-center w-full">
-                    <a href="https://shalomkarr.pages.dev" target="_blank" class="group relative flex items-center justify-center gap-3 px-6 py-2.5 w-full max-w-[300px] md:w-auto bg-[#1a2c3b] hover:bg-[#233545] rounded-full border border-white/5 hover:border-gold/60 transition-all duration-500 hover:shadow-[0_0_25px_rgba(212,175,55,0.15)] active:scale-95">
-                        <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-gold/10 to-transparent"></span>
-                        <span class="relative text-[10px] md:text-xs uppercase tracking-[0.2em] text-slate-500 group-hover:text-gold transition-colors font-bold">Built By</span>
-                        <div class="relative flex items-center gap-2 border-l border-white/10 pl-3">
-                            <span class="font-serif font-bold text-slate-300 group-hover:text-white transition-colors text-base">Shalom Karr</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-gold opacity-70 group-hover:opacity-100 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-
-            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
-                &copy; 2026 Hatzalah Cleveland. All rights reserved.
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <script src="script.js"></script>
 </body>
