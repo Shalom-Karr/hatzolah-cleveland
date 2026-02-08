@@ -76,6 +76,9 @@ const FOOTER_HTML = `
                 <p class="text-gray-400 max-w-sm">
                     Dedicated to saving lives through rapid community response. Providing peace of mind and professional care when seconds count.
                 </p>
+                <div class="mt-6 text-center text-gray-500 text-sm md:text-left">
+                    &copy; 2026 Hatzalah Cleveland. All rights reserved.
+                </div>
             </div>
             
             <div>
@@ -119,7 +122,7 @@ const FOOTER_HTML = `
                 </ul>
             </div>
         </div>
-        
+
         <!-- Divider -->
         <div class="h-px bg-white/5 w-full my-12"></div>
         
@@ -135,10 +138,6 @@ const FOOTER_HTML = `
                     </svg>
                 </div>
             </a>
-        </div>
-
-        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
-            &copy; 2026 Hatzalah Cleveland. All rights reserved.
         </div>
     </div>
 </footer>
