@@ -1,0 +1,57 @@
+/* Custom Styles */
+
+/* Ensure smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Animation for Emergency Bar */
+@keyframes pulse-red {
+    0%, 100% {
+        background-color: #cc0000;
+    }
+    50% {
+        background-color: #ff0000;
+    }
+}
+
+.animate-bg-pulse {
+    animation: pulse-red 2s infinite;
+}
+
+/* Base Font Setup */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* FAQ Icon Rotation */
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+.faq-content {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.faq-content.active {
+    max-height: 1000px; /* Increased to accommodate longer content */
+    opacity: 1;
+}
+
+.faq-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.faq-toggle.active i {
+    transform: rotate(180deg);
+}
+
+/* Sticky Navbar Shadow on Scroll handled via JS, but base style here */
+#navbar.scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

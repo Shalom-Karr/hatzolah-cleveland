@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatzalah Cleveland - Emergency Medical Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="hatzalah-logo.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            dark: '#003366',
+                            red: '#cc0000',
+                            light: '#f4f7f6',
+                        },
+                        gold: '#d4af37',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Emergency Top Bar -->
+    <div class="bg-brand-red text-white py-2 px-4 text-center font-bold sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 lg:gap-8 text-sm md:text-base">
+            <a href="tel:2168881818" class="hover:underline flex items-center gap-2">
+                <i class="fas fa-phone-alt animate-pulse"></i> EMERGENCY: 216-888-1818
+            </a>
+            <span class="hidden md:inline text-white/30">|</span>
+            <a href="tel:911" class="hover:underline flex items-center gap-2">
+                <i class="fas fa-ambulance"></i> 911 Backup
+            </a>
+            <span class="hidden lg:inline text-white/30">|</span>
+            <a href="tel:8002221222" class="hover:underline flex items-center gap-2">
+                <i class="fas fa-vial"></i> Poison Control: 800-222-1222
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-[40px] z-40 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="hatzalah-logo.png" alt="Hatzalah Cleveland Logo" class="h-12 md:h-16 w-auto transition-all duration-300" id="nav-logo">
+                <span class="text-xl md:text-2xl font-bold text-brand-dark hidden sm:inline">Hatzalah Cleveland</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-6 font-medium text-gray-600">
+                <a href="#about" class="hover:text-brand-blue transition">About</a>
+                <a href="#services" class="hover:text-brand-blue transition">Services</a>
+                <a href="#faq" class="hover:text-brand-blue transition">FAQ</a>
+                <a href="contact-us.html" class="hover:text-brand-blue transition">Contact</a>
+                <div class="flex items-center gap-3">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOdMVD9wFs-TLTkjCneFNKQGpzFR-fC8jvzWP8V-mnJ0eSog/viewform" target="_blank" class="border-2 border-brand-blue text-brand-blue px-5 py-2 rounded-full hover:bg-brand-blue hover:text-white transition shadow-sm font-semibold">
+                        Apply
+                    </a>
+                    <a href="donate.html" class="bg-brand-blue text-white px-6 py-2 rounded-full hover:bg-brand-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-semibold">
+                        Donate <i class="fas fa-heart ml-1 text-red-300"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-600 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 flex flex-col gap-4 shadow-lg absolute w-full z-50">
+            <div class="flex items-center gap-2 mb-2 border-b pb-2">
+                <img src="hatzalah-logo.png" alt="Logo" class="h-8 w-auto">
+                <span class="font-bold text-brand-dark">Hatzalah Cleveland</span>
+            </div>
+            <a href="#about" class="block text-gray-600 hover:text-brand-blue font-medium">About</a>
+            <a href="#services" class="block text-gray-600 hover:text-brand-blue">Services</a>
+            <a href="#faq" class="block text-gray-600 hover:text-brand-blue">FAQ</a>
+            <a href="contact-us.html" class="block text-gray-600 hover:text-brand-blue">Contact</a>
+            <div class="grid grid-cols-2 gap-3 mt-2">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOdMVD9wFs-TLTkjCneFNKQGpzFR-fC8jvzWP8V-mnJ0eSog/viewform" target="_blank" class="block border-2 border-brand-blue text-brand-blue px-4 py-2 rounded text-center font-semibold">Apply</a>
+                <a href="donate.html" class="block bg-brand-blue text-white px-4 py-2 rounded text-center font-semibold shadow">Donate <i class="fas fa-heart ml-1 text-red-300"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-brand-dark text-white py-16 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/medical-icons.png')]"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center md:text-left flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Seconds Count.<br>
+                    <span class="text-brand-blue text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Community Saving Lives.</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
+                    Volunteer Emergency Medical Services serving Beachwood, Cleveland Heights, University Heights, and surrounding areas.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="tel:2168881818" class="bg-brand-red text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-red-700 transition flex items-center justify-center gap-2">
+                        <i class="fas fa-phone"></i> Call Emergency
+                    </a>
+                    <a href="#about" class="border border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-brand-dark transition text-center">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-blue-500 rounded-full opacity-20 group-hover:opacity-30 animate-pulse blur-3xl transition-all duration-500"></div>
+                    <img src="hatzalah-logo.png" alt="Hatzalah Cleveland Shield" class="relative z-10 w-48 sm:w-64 md:w-80 h-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Prominent Emergency Contacts -->
+    <section class="relative z-20 -mt-8 md:-mt-16 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+                <!-- Hatzalah Card -->
+                <a href="tel:216-888-1818" class="bg-brand-red text-white p-6 md:p-8 rounded-2xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 group">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-white/30 transition">
+                        <i class="fas fa-phone-alt text-2xl md:text-3xl animate-pulse"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-1 uppercase tracking-wider">Hatzalah Emergency</h3>
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-black">216-888-1818</span>
+                    <p class="mt-2 text-red-100 font-medium text-sm md:text-base">Immediate community response</p>
+                </a>
+
+                <!-- 911 Card -->
+                <a href="tel:911" class="bg-brand-dark text-white p-6 md:p-8 rounded-2xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 group">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition">
+                        <i class="fas fa-ambulance text-2xl md:text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-1 uppercase tracking-wider">Emergency Services</h3>
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-black">911</span>
+                    <p class="mt-2 text-gray-300 font-medium text-sm md:text-base">Police, Fire, and Ambulance</p>
+                </a>
+
+                <!-- Poison Control Card -->
+                <a href="tel:8002221222" class="bg-white border-2 border-brand-blue text-brand-dark p-6 md:p-8 rounded-2xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 group">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-blue/20 transition">
+                        <i class="fas fa-vial text-2xl md:text-3xl text-brand-blue"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-1 uppercase tracking-wider text-gray-600">Poison Control</h3>
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-black text-brand-blue">800-222-1222</span>
+                    <p class="mt-2 text-gray-500 font-medium text-sm md:text-base">24/7 Expert medical help</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dear Neighbor Letter -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-brand-light p-8 md:p-12 rounded-3xl shadow-inner border border-gray-100 relative">
+                <i class="fas fa-quote-left absolute top-8 left-8 text-4xl text-brand-blue opacity-10"></i>
+                <div class="relative z-10">
+                    <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-6">Dear Neighbor,</h2>
+                    <div class="space-y-4 text-gray-700 leading-relaxed md:text-lg">
+                        <p>
+                            We are delighted to share exciting news regarding the launch of <strong>Hatzalah in Cleveland</strong>. Hatzalah, a volunteer emergency medical response service, is designed to provide rapid emergency medical care for members of our community.
+                        </p>
+                        <p>
+                            Hatzalah Cleveland has the support and encouragement of local Rabbonim, medical professionals, and community leaders. Our foundation will be built on strong Rabbinic and medical leadership ensuring the highest standards of care and sensitivity.
+                        </p>
+                        <p>
+                            Hatzalah Cleveland will initially operate in <strong>Beachwood, Cleveland Heights, and University Heights</strong>, with the possibility of expanding coverage to our other neighborhoods. Hatzalah Cleveland is not a substitute for the 911 emergency system. Our purpose is to offer a lifesaving bridge during the critical moments prior to the arrival of the local fire/rescue department.
+                        </p>
+                        <p>
+                            Hatzalah originated in New York City and now operates in cities of all sizes worldwide. In forming Hatzalah Cleveland, we are using other Hatzalahs’ and EMS systems’ best-practices to implement a model that will rapidly respond to our community’s emergency needs. We are collaborating with fire, rescue, and police departments, local municipalities, and other healthcare organizations in our formation and operations. Hatzalah Cleveland is the only Hatzalah organization in northeast Ohio authorized by Chevra Hatzalah of New York to use the name Hatzalah.
+                        </p>
+                        <p>
+                            To provide the highest level of care, volunteers will undergo training to become certified Emergency Medical Technicians, as well as receive additional medical and halachic training. This will equip them to professionally and sensitively handle emergency situations that arise in our community. Each member will have all the necessary medical and communications equipment needed to respond quickly and effectively.
+                        </p>
+                        <p>
+                            To learn more about membership requirements, or to apply for membership <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOdMVD9wFs-TLTkjCneFNKQGpzFR-fC8jvzWP8V-mnJ0eSog/viewform" target="_blank" class="text-brand-blue font-bold hover:underline">click here</a>.
+                        </p>
+                        <p>
+                            For more information, please see the FAQs below. You can also click the link at the bottom of the page.
+                        </p>
+                        <p class="font-bold text-brand-dark pt-4">
+                            Thank you for your support as we launch this important service for our community!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Mission -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-brand-dark mb-4">Our Mission</h2>
+                <div class="w-16 h-1 bg-brand-blue mx-auto rounded"></div>
+                <p class="mt-6 text-gray-600 text-base md:text-lg px-2">
+                    Hatzalah Cleveland is a volunteer EMS organization providing rapid response and professional emergency care. Our goal is to stabilize patients and bridge the gap until ambulance transport arrives.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 md:gap-10">
+                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow text-brand-blue text-xl md:text-2xl">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-brand-dark">Rapid Response</h3>
+                    <p class="text-gray-600 text-sm md:text-base">With volunteers living and working in the community, our response times are measured in seconds, not minutes.</p>
+                </div>
+                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow text-brand-blue text-xl md:text-2xl">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-brand-dark">Professional Care</h3>
+                    <p class="text-gray-600 text-sm md:text-base">Our responders are state-certified EMTs and Paramedics equipped with advanced lifesaving equipment.</p>
+                </div>
+                <div class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow text-brand-blue text-xl md:text-2xl">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 text-brand-dark">100% Volunteer</h3>
+                    <p class="text-gray-600 text-sm md:text-base">We are a non-profit organization funded entirely by donations. Our services are free of charge to everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Frequently Asked Questions</h2>
+                <div class="w-16 h-1 bg-brand-blue mx-auto rounded"></div>
+                <p class="mt-4 text-gray-500">Common questions about our services and operations.</p>
+            </div>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">What is Hatzalah?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="leading-relaxed">Hatzalah, Hebrew for “rescue”, was started in Williamsburg, New York in 1965, for the purpose of responding to the unique cultural and religious needs of the Jewish community and improving pre-hospital emergency medical care. Over the years, Hatzalah has grown into the largest volunteer ambulance service in North America. In fact, Hatzalah members were some of the first EMS personnel to arrive at the World Trade Center on September 11, 2001. Hatzalah has chapters in cities throughout the country and world including California, Connecticut, Florida, Illinois, Maryland, Michigan, New Jersey, New York, Pennsylvania, and Texas. Hatzalah has been instrumental in the saving of thousands of lives and in the assistance of others in their times of need.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">What is Hatzalah Cleveland?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="leading-relaxed">Hatzalah Cleveland is a non-profit organization whose purpose is to rapidly respond to the emergency medical needs of the Cleveland Jewish community. Hatzalah Cleveland complements local fire/rescue services by providing rapid, high quality care within minutes of being dispatched. Hatzalah Cleveland also ensures that 911 has been called and EMTs continue to provide care and comfort, remaining with patients until care has been transferred to fire/rescue personnel.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Why was Hatzalah Cleveland started?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="mb-3 leading-relaxed">Hatzalah Cleveland was started to help during those few precious minutes during which immediate and proper care may mean the difference between a patient surviving or not. Our primary goal is to provide trained volunteers capable of responding to any type of medical emergency in our communities.</p>
+                        <p class="mb-3 leading-relaxed">Hatzalah Cleveland volunteers are in our schools, shuls, community institutions and neighborhoods. Each volunteer has the skill and equipment to quickly begin stabilizing patients until further medical emergency resources arrive on scene.</p>
+                        <p class="leading-relaxed">Additionally, injured or ill community members are at times uncertain whether medical attention is necessary. A quick assessment by a Hatzalah Cleveland Emergency Medical Technician can convince the patient to seek definitive care sooner than they would have otherwise.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">When is it appropriate to call Hatzalah Cleveland?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="mb-3 leading-relaxed">If one is faced with a life-threatening emergency or even the potential of a life-threatening emergency, call Hatzalah Cleveland and 911 even on Shabbos.</p>
+                        <p class="mb-3 font-semibold text-brand-dark">Situations in which you should call include:</p>
+                        <div class="bg-gray-50 p-4 rounded-lg mb-3">
+                            <ul class="grid md:grid-cols-2 gap-2 text-sm md:text-base">
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Allergic reactions</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Altered mental status</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Cardiac concerns</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Choking</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Diabetic concerns</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Difficulty breathing</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> High fevers</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> OB emergencies</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Suspected poisonings</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Suspected stroke</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Automobile accidents</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Unusual bleeding</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Burns</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Fractures</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Severe wounds</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Slips and falls</li>
+                            </ul>
+                        </div>
+                        <p class="text-sm italic">If you consider calling 911 for a medical-related issue, consider calling Hatzalah Cleveland as well.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Are there services that Hatzalah Cleveland does not provide?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="mb-3 leading-relaxed">Yes. Hatzalah Cleveland will not provide transportation to a hospital. Our goal is to provide immediate care and serve as a bridge until fire/rescue personnel arrive and assume patient care.</p>
+                        <p class="leading-relaxed">Additionally, we are not trained to diagnose problems. Determining the cause is not within our scope of practice. That is something to be determined by doctors.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">What training do responders have?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="mb-3 leading-relaxed">Hatzalah Cleveland members have undergone training to become certified Emergency Medical Technicians. In addition, Hatzalah Cleveland members will also have additional medical training not required by the licensing organizations.</p>
+                        <p class="leading-relaxed">All Hatzalah Cleveland members are also be required to learn and understand the Jewish laws that apply to delivering medical care.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Does Hatzalah have a continuing education program for its responders?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="leading-relaxed">Yes. Continuing education training is mandatory and enables us to provide the best care possible. Each EMT is required to attend periodic continuing education classes and/or drills.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Does Hatzalah offer community training?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="mb-3 leading-relaxed">Yes. As part of our goal to improve outcomes of medical emergencies, Hatzalah Cleveland will offer members of the community the opportunity to take safety classes.</p>
+                        <div class="bg-gray-50 p-4 rounded-lg mb-3">
+                            <ul class="list-none space-y-1">
+                                <li class="flex items-center gap-2"><i class="fas fa-dot-circle text-brand-blue text-xs"></i> Basic first aid and choking instruction</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-dot-circle text-brand-blue text-xs"></i> Basic CPR</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-dot-circle text-brand-blue text-xs"></i> AED instruction</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-dot-circle text-brand-blue text-xs"></i> Stop the bleed</li>
+                                <li class="flex items-center gap-2"><i class="fas fa-dot-circle text-brand-blue text-xs"></i> Stroke awareness</li>
+                            </ul>
+                        </div>
+                        <p class="text-sm">If you are interested in learning more about organizing one of the above classes, please contact us.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Why won’t Hatzalah members talk about a patient they treated?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="leading-relaxed">The most important reason is the federally-mandated HIPAA law, which legally forbids any member of Hatzalah from revealing any information about a patient to anyone. Please do not ask any Hatzalah Cleveland member about a patient’s condition or a call.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Is Hatzalah Cleveland affiliated with any other organization?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="leading-relaxed">Hatzalah Cleveland is a community organization operating under the auspices and direction of its Rabbinical Board. We are an affiliate of Central Hatzalah of New York, the oldest and largest Jewish emergency-care volunteer organization in the world.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 11 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">How is Hatzalah Cleveland funded?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="leading-relaxed">Hatzalah Cleveland is an IRS-recognized 501(c)(3) tax-exempt corporation funded only through private donations. One hundred percent of every dollar donated funds Hatzalah Cleveland’s operations. All Hatzalah Cleveland personnel are unpaid volunteers.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 12 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Does Hatzalah Cleveland charge for its services?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="leading-relaxed">No, Hatzalah Cleveland doesn’t charge a fee for providing its emergency patient care.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 13 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">Is Hatzalah Cleveland accepting new members?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="mb-4 leading-relaxed">Hatzalah Cleveland is completely dependent on local residents volunteering to provide coverage in our community. We are always seeking new local volunteers to assist, and can help provide necessary training and support.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOdMVD9wFs-TLTkjCneFNKQGpzFR-fC8jvzWP8V-mnJ0eSog/viewform" target="_blank" class="inline-block bg-brand-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-brand-dark transition shadow-md">Apply Here</a>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 14 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden border border-gray-100 group">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg text-brand-dark group-hover:text-brand-blue transition">How can I find more information about Hatzalah Cleveland?</span>
+                        <span class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition">
+                            <i class="fas fa-plus text-sm transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-gray-600 border-t border-gray-50">
+                        <p class="leading-relaxed">Call <a href="tel:2163536613" class="text-brand-blue font-bold hover:underline">216-353-6613</a>, Hatzalah Cleveland’s non-emergency office number. If no one answers, please leave a message and someone will get back to you. You can also click the Contact Us link at the bottom of the page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="hatzalah-logo.png" alt="Hatzalah Cleveland" class="h-16 w-auto bg-white p-1 rounded">
+                        <h3 class="text-2xl font-bold">Hatzalah Cleveland</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-sm">
+                        Dedicated to saving lives through rapid community response. Providing peace of mind and professional care when seconds count.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-brand-blue">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-phone fa-fw"></i> Non-Emergency: 216-353-6613</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope fa-fw"></i> info@hatzalahcleveland.org</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt fa-fw"></i> Cleveland Heights, OH</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-brand-blue">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="donate.html" class="hover:text-white transition">Donate</a></li>
+                        <li><a href="contact-us.html" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="communications-consent.html" class="hover:text-white transition">Consent Form</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+                <!-- Divider -->
+                <div class="h-px bg-white/5 w-full my-12"></div>
+                
+                <!-- Centered Built By Section -->
+                <div class="flex justify-center items-center w-full">
+                    <a href="https://shalomkarr.pages.dev" target="_blank" class="group relative flex items-center justify-center gap-3 px-6 py-2.5 w-full max-w-[300px] md:w-auto bg-[#1a2c3b] hover:bg-[#233545] rounded-full border border-white/5 hover:border-gold/60 transition-all duration-500 hover:shadow-[0_0_25px_rgba(212,175,55,0.15)] active:scale-95">
+                        <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-gold/10 to-transparent"></span>
+                        <span class="relative text-[10px] md:text-xs uppercase tracking-[0.2em] text-slate-500 group-hover:text-gold transition-colors font-bold">Built By</span>
+                        <div class="relative flex items-center gap-2 border-l border-white/10 pl-3">
+                            <span class="font-serif font-bold text-slate-300 group-hover:text-white transition-colors text-base">Shalom Karr</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-gold opacity-70 group-hover:opacity-100 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
+                &copy; 2026 Hatzalah Cleveland. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
