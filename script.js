@@ -151,6 +151,18 @@ const BACK_TO_TOP_HTML = `
 </button>
 `;
 
+// Mobile CTA Bar HTML
+const MOBILE_CTA_HTML = `
+<div id="mobile-cta" class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-[0_-4px_12px_rgba(0,0,0,0.08)] p-3 flex items-stretch justify-center gap-3 z-40">
+    <a href="tel:2168881818" class="flex-1 bg-brand-red text-white py-3 rounded-lg font-bold text-sm shadow-md hover:bg-red-700 transition flex items-center justify-center gap-2 text-center">
+        <i class="fas fa-phone-alt"></i> EMERGENCY
+    </a>
+    <a href="donate.html" class="flex-1 bg-brand-blue text-white py-3 rounded-lg font-bold text-sm shadow-md hover:bg-brand-dark transition flex items-center justify-center gap-2 text-center">
+         <i class="fas fa-heart text-red-300"></i> DONATE
+    </a>
+</div>
+`;
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // 1. Inject Shared Header & Footer
@@ -162,6 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inject Back to Top Button
     document.body.insertAdjacentHTML('beforeend', BACK_TO_TOP_HTML);
+    
+    // Inject Mobile CTA Bar
+    document.body.insertAdjacentHTML('beforeend', MOBILE_CTA_HTML);
+    document.body.classList.add('has-mobile-cta');
 
     // 2. Initialize Interactions
     initInteractions();
